@@ -34,13 +34,13 @@ def get_weather_data(request) -> JsonResponse:
     city = request.GET.get('city', 'Dnipro')
     try:
         data = DataWeather.objects.get(city=city)
-        print(data)
     except DataWeather.DoesNotExist:
         response = {
             'error': 'No weather data available'
         }
     else:
         response = {
+            'city': data.city,
             'currentTemp': data.current_temp,
             'tempMin': data.temp_min,
             'tempMax': data.temp_max,
