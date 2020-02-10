@@ -24,7 +24,7 @@ Run server
 ```sh
 $ python manage.py runserver
 ```
-Endpoint `/api/syncWeather` that syncs weather info to a MySQL DB
-Endpoint `/api/currentWeather` that returns the following weather information from DB in a JSON format
+Endpoint `/api/syncWeather` that syncs weather info to a MySQL DB.
+Endpoint `/api/currentWeather` that returns the following weather information from DB in a JSON format.
 
-If you want choice another city, use query string parameter `city`. Default city is Dipro.
+If you want choice another city, use query string parameter `city`. Default city is Dnipro.
